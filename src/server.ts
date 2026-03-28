@@ -11,6 +11,7 @@ import {
   type ModelMessage
 } from "ai";
 import { z } from "zod";
+import type { TeamState } from "./types";
 
 /**
  * The AI SDK's downloadAssets step runs `new URL(data)` on every file
@@ -34,8 +35,14 @@ function inlineDataUrls(messages: ModelMessage[]): ModelMessage[] {
   });
 }
 
-export class ChatAgent extends AIChatAgent<Env> {
-  maxPersistedMessages = 100;
+export class HackathonMentor extends AIChatAgent<Env, TeamState> {
+  initialState: TeamState = {
+    team_name: "",
+    project_idea: "",
+    stack: "",
+    checklist: null,
+    started_at: null
+  };
 
   onStart() {
     // Configure OAuth popup behavior for MCP servers that require authentication

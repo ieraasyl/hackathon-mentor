@@ -6,7 +6,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "hackathon-mentor",
   "main": "src/server.ts",
-  "compatibility_date": "2026-03-02",
+  "compatibility_date": "2026-03-17",
   "compatibility_flags": ["nodejs_compat"],
   "ai": {
     "binding": "AI",
@@ -20,14 +20,14 @@
   "durable_objects": {
     "bindings": [
       {
-        "class_name": "ChatAgent",
-        "name": "ChatAgent"
+        "class_name": "HackathonMentor",
+        "name": "HackathonMentor"
       }
     ]
   },
   "migrations": [
     {
-      "new_sqlite_classes": ["ChatAgent"],
+      "new_sqlite_classes": ["HackathonMentor"],
       "tag": "v1"
     }
   ],

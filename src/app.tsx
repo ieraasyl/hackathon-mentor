@@ -4,7 +4,7 @@ import { useAgentChat } from "@cloudflare/ai-chat/react";
 import { isToolUIPart, getToolName } from "ai";
 import type { UIMessage } from "ai";
 import type { MCPServersState } from "agents";
-import type { ChatAgent } from "./server";
+import type { HackathonMentor } from "./server";
 import {
   Button,
   Badge,
@@ -243,8 +243,8 @@ function Chat() {
   const [isAddingServer, setIsAddingServer] = useState(false);
   const mcpPanelRef = useRef<HTMLDivElement>(null);
 
-  const agent = useAgent<ChatAgent>({
-    agent: "ChatAgent",
+  const agent = useAgent<HackathonMentor>({
+    agent: "HackathonMentor",
     onOpen: useCallback(() => setConnected(true), []),
     onClose: useCallback(() => setConnected(false), []),
     onError: useCallback(
@@ -450,11 +450,11 @@ function Chat() {
         <div className="max-w-3xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <h1 className="text-lg font-semibold text-kumo-default">
-              <span className="mr-2">⛅</span>Agent Starter
+              <span className="mr-2">⛅</span>Hackathon Mentor
             </h1>
             <Badge variant="secondary">
               <ChatCircleDotsIcon size={12} weight="bold" className="mr-1" />
-              AI Chat
+              Hackathon Mentor
             </Badge>
           </div>
           <div className="flex items-center gap-3">
