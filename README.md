@@ -8,13 +8,13 @@ https://hackathon-mentor.ieraasyl.workers.dev/
 
 ## Try the UI
 
-| Area             | What to do                                                                                                                                |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Chat**         | Use starter chips or type; streaming over WebSocket.                                                                                      |
-| **Mentor tools** | Ask to evaluate an idea, suggest stack, generate checklist, mark tasks done, or suggest team names — tool cards appear in the transcript. |
-| **Images**       | Drag/drop, paste, or pick a file; ask about the image.                                                                                    |
+| Area             | What to do                                                                                                                                      |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Chat**         | Use starter chips or type; streaming over WebSocket.                                                                                            |
+| **Mentor tools** | Ask to evaluate an idea, suggest stack, generate checklist, mark tasks done, or suggest team names — tool cards appear in the transcript.       |
+| **Images**       | Drag/drop, paste, or pick a file; ask about the image.                                                                                          |
 | **MCP**          | Header **MCP** → add a server URL; tools merge into the model. Tested with [Context7 OAuth MCP](https://mcp.context7.com/mcp/oauth) at minimum. |
-| **Header**       | **Debug** = raw message JSON; sun/moon = theme; **Clear** = reset chat.                                                                   |
+| **Header**       | **Debug** = raw message JSON; sun/moon = theme; **Clear** = reset chat.                                                                         |
 
 ## Run locally
 
