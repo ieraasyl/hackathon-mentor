@@ -105,6 +105,17 @@ export class HackathonMentor extends AIChatAgent<Env, TeamState> {
 
 export default {
   async fetch(request: Request, env: Env) {
+    const url = new URL(request.url);
+    const accept = request.headers.get("Accept") ?? "";
+
+    if (
+      request.method === "GET" &&
+      url.pathname.startsWith("/agents/") &&
+      accept.includes("text/html")
+    ) {
+      return env.ASSETS.fetch(new Request(new URL("/", request.url), request));
+    }
+
     return (
       (await routeAgentRequest(request, env)) ||
       new Response("Not found", { status: 404 })
